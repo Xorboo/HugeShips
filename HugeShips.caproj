@@ -1,0 +1,601 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>HugeShips</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>3ka3x72nzpcfl</unique-id>
+    <saved-with-version>21600</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Multiplayer" version="1">Multiplayer</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
+        <plugin author="Scirra" id="shadowlight" version="1">Shadow Light</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="shadowcaster" version="1">Shadow Caster</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+        <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Brad Larson" id="stretch">Stretch</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>854</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="WALL" sid="8971035057799302">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="WidthVar" sid="2170856658930957" type="number" />
+                <instance-variable name="HeightVar" sid="6007143395866148" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Solid" sid="8277110028133544">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="ShadowCaster" sid="3161196607281998">
+                    <behavior id="shadowcaster" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="7639877008242961">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="332179414006194">
+                    <behavior id="bound" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8378355486339869" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Art\ART\Bu4Art\Скетчи\hugeGuns\block.png">
+                        <collision-poly>
+                            <point x="0.0546875" y="0" />
+                            <point x="0.953125" y="0" />
+                            <point x="0.996094" y="0.046875" />
+                            <point x="1" y="0.945313" />
+                            <point x="0.941406" y="1" />
+                            <point x="0.0507813" y="1" />
+                            <point x="0" y="0.933594" />
+                            <point x="0" y="0.0703125" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="9213279118857916">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="HERO" sid="7737263447037298">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="6485002571675022">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="2402141965970425">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Wrap" sid="2505044783320107">
+                    <behavior id="wrap" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9470005793420794" speed="5">
+                    <frame duration="1" hotspotX="0.297297" hotspotY="0.348485" original-source="E:\Art\ART\Bu4Art\Скетчи\hugeGuns\tron_gun01.png">
+                        <image-point name="frontview" x="0.959459" y="0.484848" />
+                        <image-point name="handle" x="0.0675676" y="0.469697" />
+                        <collision-poly>
+                            <point x="0.5" y="0.0327869" />
+                            <point x="0.804878" y="0.131148" />
+                            <point x="0.853659" y="0.663934" />
+                            <point x="0.109756" y="0.729508" />
+                            <point x="0.5" y="0.819672" />
+                            <point x="0.719512" y="0.844262" />
+                            <point x="0.097561" y="0.663934" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Peer" sid="5780150156981841">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="peerid" sid="1422823709458953" type="string" />
+                <instance-variable name="lookatx" sid="3768448022046196" type="number" />
+                <instance-variable name="lookaty" sid="6853851216185013" type="number" />
+                <instance-variable name="inputs" sid="198058219993905" type="number" />
+                <instance-variable name="health" sid="2511323238036615" type="number" />
+                <instance-variable name="reload" sid="7076078894740061" type="number" />
+                <instance-variable name="FirstShot" sid="6155220576463251" type="boolean" />
+                <instance-variable name="deaths" sid="1046826234667167" type="number" />
+                <instance-variable name="reload_time" sid="7374296060561346" type="number" />
+                <instance-variable name="current_reload" sid="404032511380988" type="number" />
+                <instance-variable name="color" sid="8888931900623339" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="8Direction" sid="6532310978903457">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="2347892812666648">
+                    <behavior id="Flash" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="587890764279037">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="LineOfSight" sid="589436288944551">
+                    <behavior id="LOS" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="6757933116471275">
+                    <behavior id="bound" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Peer</type>
+                <type>Energy</type>
+                <type>Sprite</type>
+            </container>
+            <animation-folder>
+                <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2106138452331368" speed="0">
+                    <frame duration="1" hotspotX="0.494382" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="1.05618" y="0.5" />
+                        <image-point name="Imagepoint 2" x="0.101124" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.955056" y="0.333333" />
+                            <point x="0.977528" y="0.630952" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.494382" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="1.05618" y="0.5" />
+                        <image-point name="Imagepoint 2" x="0.168539" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0.392857" />
+                            <point x="1" y="0.595238" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="1.05682" y="0.5" />
+                        <image-point name="Imagepoint 2" x="0.147727" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.977273" y="0.369048" />
+                            <point x="0.977273" y="0.619047" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.494505" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="1.05495" y="0.511364" />
+                        <image-point name="Imagepoint 2" x="0.153846" y="0.5" />
+                        <collision-poly>
+                            <point x="0.010989" y="0.0227273" />
+                            <point x="0.989011" y="0.329545" />
+                            <point x="0.967033" y="0.659091" />
+                            <point x="0.010989" y="0.954545" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.488889" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="1.05556" y="0.5" />
+                        <image-point name="Imagepoint 2" x="0.1" y="0.5" />
+                        <collision-poly>
+                            <point x="0" y="0.0853658" />
+                            <point x="0.977778" y="0.256098" />
+                            <point x="0.977778" y="0.756098" />
+                            <point x="0" y="0.926829" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.488889" hotspotY="0.505882">
+                        <image-point name="Imagepoint 1" x="1.05556" y="0.505882" />
+                        <image-point name="Imagepoint 2" x="0.1" y="0.494118" />
+                        <collision-poly>
+                            <point x="0" y="0.0823529" />
+                            <point x="1" y="0.223529" />
+                            <point x="1" y="0.729412" />
+                            <point x="0" y="0.882353" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bullet" sid="387205298436121">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Scale" sid="3794721074070003" type="number" />
+                <instance-variable name="Power" sid="8935160010380699" type="number" />
+                <instance-variable name="lifetime" sid="2544160115410844" type="number" />
+                <instance-variable name="ShooterID" sid="4004269512185934" type="string" />
+                <instance-variable name="CanHitSelf" sid="9835943748326279" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="7003046787971894">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="3151443211774903">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="LineOfSight" sid="9772593595087887">
+                    <behavior id="LOS" />
+                </behavior-type>
+            </behaviors>
+            <effects>
+                <effect-type name="Stretch">
+                    <effect id="stretch" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="103981264954145" speed="5">
+                    <frame duration="1" hotspotX="0.642857" hotspotY="0.545455" original-source="E:\Art\ART\Bu4Art\Скетчи\hugeGuns\shell.png">
+                        <collision-poly>
+                            <point x="0.627976" y="0.232955" />
+                            <point x="0.879465" y="0.1875" />
+                            <point x="0.973214" y="0.556819" />
+                            <point x="0.877976" y="0.9375" />
+                            <point x="0.638392" y="0.897726" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ShadowLight" sid="2655254217843589">
+            <plugin id="shadowlight" />
+        </object-type>
+        <object-type name="Gamepad" sid="9853663592026547">
+            <plugin id="gamepad" />
+        </object-type>
+        <object-type name="Keyboard" sid="2389280685681377">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Sprite3" sid="6917960823832253">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="6942730045855952">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="4216229992171765">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1264973980752051" speed="5">
+                    <frame duration="1" hotspotX="0.453125" hotspotY="0.5" original-source="E:\Art\ART\Bu4Art\Скетчи\hugeGuns\shield.png">
+                        <collision-poly>
+                            <point x="0.909091" y="0.5" />
+                            <point x="0.818182" y="0.952381" />
+                            <point x="0.181818" y="0.952381" />
+                            <point x="0" y="0.5" />
+                            <point x="0.545455" y="0.285714" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="big_energy" sid="2915853147267097">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8739652059676861" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Art\ART\Bu4Art\Скетчи\hugeGuns\energy_tank.png">
+                        <collision-poly>
+                            <point x="0.18" y="0.166667" />
+                            <point x="0.5" y="0.111111" />
+                            <point x="0.78" y="0.203704" />
+                            <point x="0.94" y="0.5" />
+                            <point x="0.82" y="0.833333" />
+                            <point x="0.5" y="0.981481" />
+                            <point x="0.16" y="0.851852" />
+                            <point x="0.06" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="144784392015173">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="BoundToLayout" sid="4604359564078595">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="6940808877086674">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8820986823657061" speed="5">
+                    <frame duration="1" hotspotX="0.505837" hotspotY="0.51895" original-source="E:\Art\ART\Bu4Art\Скетчи\hugeGuns\tumannost-8544x5696-kosmos-zvezdi-andromeda-6592.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ProgressBar" sid="9102990730128577">
+            <plugin id="progressbar" />
+            <instance-variables>
+                <instance-variable name="energy" sid="899813702979719" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="338430201992532">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="1001925242022087">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="small_energy" sid="527551983657012">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="LineOfSight" sid="3802875984568991">
+                    <behavior id="LOS" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="5196211383578796">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4442700701366179" speed="5">
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.6" original-source="E:\Art\ART\Bu4Art\Скетчи\hugeGuns\small_tank.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.257143" />
+                            <point x="0.5" y="0.0857143" />
+                            <point x="0.84375" y="0.285714" />
+                            <point x="0.96875" y="0.485714" />
+                            <point x="0.84375" y="0.857143" />
+                            <point x="0.5" y="0.942857" />
+                            <point x="0.1875" y="0.828571" />
+                            <point x="0.03125" y="0.485714" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="2637191518203733">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8238685849782739" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="explosion" sid="3701828804088851">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="blast" sid="4133644351452669" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Fade" sid="1111875149633708">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1681068943613091" speed="15">
+                    <frame duration="1" hotspotX="0.375" hotspotY="0.458333">
+                        <collision-poly>
+                            <point x="0.09375" y="0.078125" />
+                            <point x="0.90625" y="0.078125" />
+                            <point x="0.901042" y="0.911458" />
+                            <point x="0.0885417" y="0.916667" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.428571" hotspotY="0.481481">
+                        <collision-poly>
+                            <point x="0.129464" y="0.115741" />
+                            <point x="0.848214" y="0.12037" />
+                            <point x="0.852679" y="0.884259" />
+                            <point x="0.102679" y="0.893519" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.459459" hotspotY="0.472222">
+                        <collision-poly>
+                            <point x="0.121622" y="0.114583" />
+                            <point x="0.878378" y="0.104167" />
+                            <point x="0.871621" y="0.885417" />
+                            <point x="0.108108" y="0.881945" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Energy" sid="2984771579199125">
+            <plugin id="Text" />
+            <container>
+                <type>Peer</type>
+                <type>Energy</type>
+                <type>Sprite</type>
+            </container>
+        </object-type>
+        <object-type name="guard" sid="9400872972421675">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="8652941923776018">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="3603860326742189">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Wrap" sid="7772900820577795">
+                    <behavior id="wrap" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4301439082464845" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Art\ART\Bu4Art\Скетчи\hugeGuns\guard.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.5" y="0.05" />
+                            <point x="1" y="0" />
+                            <point x="0.95" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="0.95" />
+                            <point x="0" y="1" />
+                            <point x="0.05" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite6" sid="2255106559610595">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="LineOfSight" sid="2416506339204576">
+                    <behavior id="LOS" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9534261398747737" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Art\ART\Bu4Art\Скетчи\hugeGuns\guard_eye.png">
+                        <image-point name="Imagepoint 1" x="0.952381" y="0.5" />
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0.0238095" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0.0238095" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="guard_bullet" sid="355935181404793">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="1030635497253535">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="966106855144593">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6557682675066599" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.515152" original-source="E:\Art\ART\Bu4Art\Скетчи\hugeGuns\guard_bullet.png">
+                        <collision-poly>
+                            <point x="0.158088" y="0.477273" />
+                            <point x="0.503676" y="0.140152" />
+                            <point x="0.856618" y="0.477273" />
+                            <point x="0.5" y="0.840909" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Multiplayer" sid="8999171600685981">
+            <plugin id="Multiplayer" />
+        </object-type>
+        <object-type name="Scores" sid="7970344970070004">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="3729655750197843">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="Function" sid="8468621973545932">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="Sprite" sid="9543757264247994">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="6980173318895196">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Peer</type>
+                <type>Energy</type>
+                <type>Sprite</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7878580453047353" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" original-source="E:\Art\ART\Bu4Art\Скетчи\hugeGuns\load_bar.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="trail" sid="3972585050823321">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="6858127559898887">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="932997955458413">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8083691662117734" speed="12">
+                    <frame duration="1" hotspotX="1" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="1" hotspotY="0.545455" />
+                    <frame duration="1" hotspotX="1" hotspotY="0.571429" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>GameLayout.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>GameEvents.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Mouse" uid="2" />
+        <global-instance type="Gamepad" uid="21">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
+        <global-instance type="Keyboard" uid="1" />
+        <global-instance type="Multiplayer" uid="52" />
+        <global-instance type="Function" uid="10" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

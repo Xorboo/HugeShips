@@ -1,0 +1,1534 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameEvents</name>
+    <events>
+        <variable constant="1" name="GAME_NAME" sid="5388326636461667" static="0" type="text">TehShooter</variable>
+        <variable constant="1" name="INSTANCE_NAME" sid="5037805998381372" static="0" type="text">default</variable>
+        <variable constant="1" name="ROOM_NAME" sid="7710941666921828" static="0" type="text">main</variable>
+        <event-group description="" sid="9965321857351915" title="Signalling">
+            <sub-events>
+                <event-block sid="5742982263902557">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="6648947620821502" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="15" name="Add client input value" sid="1429040757556247" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;lookx&quot;</param>
+                            <param id="1" name="Precision">2</param>
+                            <param id="2" name="Interpolation">1</param>
+                        </action>
+                        <action id="15" name="Add client input value" sid="255945550986943" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;looky&quot;</param>
+                            <param id="1" name="Precision">2</param>
+                            <param id="2" name="Interpolation">1</param>
+                        </action>
+                        <action id="15" name="Add client input value" sid="5146292159329098" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;inputs&quot;</param>
+                            <param id="1" name="Precision">3</param>
+                            <param id="2" name="Interpolation">0</param>
+                        </action>
+                        <action id="11" name="Sync object" sid="8382619785529649" type="Multiplayer">
+                            <param id="0" name="Object">Peer</param>
+                            <param id="1" name="Data">1</param>
+                            <param id="2" name="Precision">1</param>
+                            <param id="3" name="Bandwidth">0</param>
+                        </action>
+                        <action id="12" name="Sync instance variable" sid="1384892428822237" type="Multiplayer">
+                            <param id="0" name="Object">Peer</param>
+                            <param id="1" name="Instance variable">Peer|lookatx</param>
+                            <param id="2" name="Precision">2</param>
+                            <param id="3" name="Interpolation">1</param>
+                            <param id="4" name="Client value tag">&quot;lookx&quot;</param>
+                        </action>
+                        <action id="12" name="Sync instance variable" sid="3507268465697695" type="Multiplayer">
+                            <param id="0" name="Object">Peer</param>
+                            <param id="1" name="Instance variable">Peer|lookaty</param>
+                            <param id="2" name="Precision">2</param>
+                            <param id="3" name="Interpolation">1</param>
+                            <param id="4" name="Client value tag">&quot;looky&quot;</param>
+                        </action>
+                        <action id="12" name="Sync instance variable" sid="7495775507335983" type="Multiplayer">
+                            <param id="0" name="Object">Peer</param>
+                            <param id="1" name="Instance variable">Peer|inputs</param>
+                            <param id="2" name="Precision">3</param>
+                            <param id="3" name="Interpolation">0</param>
+                            <param id="4" name="Client value tag">&quot;inputs&quot;</param>
+                        </action>
+                        <action id="12" name="Sync instance variable" sid="4396385232685928" type="Multiplayer">
+                            <param id="0" name="Object">Peer</param>
+                            <param id="1" name="Instance variable">Peer|health</param>
+                            <param id="2" name="Precision">1</param>
+                            <param id="3" name="Interpolation">0</param>
+                            <param id="4" name="Client value tag">&quot;&quot;</param>
+                        </action>
+                        <action id="12" name="Sync instance variable" sid="4140865583587187" type="Multiplayer">
+                            <param id="0" name="Object">Peer</param>
+                            <param id="1" name="Instance variable">Peer|deaths</param>
+                            <param id="2" name="Precision">2</param>
+                            <param id="3" name="Interpolation">0</param>
+                            <param id="4" name="Client value tag">&quot;&quot;</param>
+                        </action>
+                        <action id="12" name="Sync instance variable" sid="3780199761187876" type="Multiplayer">
+                            <param id="0" name="Object">Peer</param>
+                            <param id="1" name="Instance variable">Peer|reload_time</param>
+                            <param id="2" name="Precision">1</param>
+                            <param id="3" name="Interpolation">0</param>
+                            <param id="4" name="Client value tag">&quot;&quot;</param>
+                        </action>
+                        <action id="12" name="Sync instance variable" sid="7751727601764512" type="Multiplayer">
+                            <param id="0" name="Object">Peer</param>
+                            <param id="1" name="Instance variable">Peer|current_reload</param>
+                            <param id="2" name="Precision">1</param>
+                            <param id="3" name="Interpolation">0</param>
+                            <param id="4" name="Client value tag">&quot;&quot;</param>
+                        </action>
+                        <action id="12" name="Sync instance variable" sid="1623290645797713" type="Multiplayer">
+                            <param id="0" name="Object">Peer</param>
+                            <param id="1" name="Instance variable">Peer|color</param>
+                            <param id="2" name="Precision">3</param>
+                            <param id="3" name="Interpolation">0</param>
+                            <param id="4" name="Client value tag">&quot;&quot;</param>
+                        </action>
+                        <action id="11" name="Sync object" sid="9940728388519256" type="Multiplayer">
+                            <param id="0" name="Object">Bullet</param>
+                            <param id="1" name="Data">3</param>
+                            <param id="2" name="Precision">1</param>
+                            <param id="3" name="Bandwidth">0</param>
+                        </action>
+                        <action id="12" name="Sync instance variable" sid="8776986610128507" type="Multiplayer">
+                            <param id="0" name="Object">Bullet</param>
+                            <param id="1" name="Instance variable">Bullet|Scale</param>
+                            <param id="2" name="Precision">1</param>
+                            <param id="3" name="Interpolation">1</param>
+                            <param id="4" name="Client value tag">&quot;WidthVar2&quot;</param>
+                        </action>
+                        <action id="11" name="Sync object" sid="4944934616208318" type="Multiplayer">
+                            <param id="0" name="Object">big_energy</param>
+                            <param id="1" name="Data">3</param>
+                            <param id="2" name="Precision">1</param>
+                            <param id="3" name="Bandwidth">0</param>
+                        </action>
+                        <action id="11" name="Sync object" sid="6912305896888112" type="Multiplayer">
+                            <param id="0" name="Object">small_energy</param>
+                            <param id="1" name="Data">3</param>
+                            <param id="2" name="Precision">1</param>
+                            <param id="3" name="Bandwidth">0</param>
+                        </action>
+                        <action id="11" name="Sync object" sid="8351500263806524" type="Multiplayer">
+                            <param id="0" name="Object">WALL</param>
+                            <param id="1" name="Data">3</param>
+                            <param id="2" name="Precision">1</param>
+                            <param id="3" name="Bandwidth">0</param>
+                        </action>
+                        <action id="12" name="Sync instance variable" sid="2501402770255721" type="Multiplayer">
+                            <param id="0" name="Object">WALL</param>
+                            <param id="1" name="Instance variable">WALL|WidthVar</param>
+                            <param id="2" name="Precision">1</param>
+                            <param id="3" name="Interpolation">0</param>
+                            <param id="4" name="Client value tag">&quot;WidthVar2&quot;</param>
+                        </action>
+                        <action id="12" name="Sync instance variable" sid="6137531486391207" type="Multiplayer">
+                            <param id="0" name="Object">WALL</param>
+                            <param id="1" name="Instance variable">WALL|HeightVar</param>
+                            <param id="2" name="Precision">1</param>
+                            <param id="3" name="Interpolation">0</param>
+                            <param id="4" name="Client value tag">&quot;HeightVar2&quot;</param>
+                        </action>
+                        <action id="11" name="Sync object" sid="6022779515540306" type="Multiplayer">
+                            <param id="0" name="Object">explosion</param>
+                            <param id="1" name="Data">3</param>
+                            <param id="2" name="Precision">1</param>
+                            <param id="3" name="Bandwidth">0</param>
+                        </action>
+                        <action id="1" name="Connect" sid="1059864434712627" type="Multiplayer">
+                            <param id="0" name="Server">&quot;wss://multiplayer.scirra.com&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <variable constant="0" name="NameVar" sid="1832133638007917" static="0" type="number">123</variable>
+                <variable constant="0" name="PeerName" sid="7505634677453608" static="0" type="text"></variable>
+                <event-block sid="6043955269759318">
+                    <conditions>
+                        <condition id="2" name="On connected" sid="2958090156110116" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="7519200196938431" type="System">
+                            <param id="0" name="Variable">PeerName</param>
+                            <param id="1" name="Value">&quot;TheName of &quot; &amp; NameVar &amp; &quot;k&quot;</param>
+                        </action>
+                        <action id="4" name="Log in" sid="2159631130366292" type="Multiplayer">
+                            <param id="0" name="Alias">PeerName</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4983193376757002">
+                    <conditions>
+                        <condition id="4" name="On logged in" sid="4397450563450667" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Join room" sid="6059953615007228" type="Multiplayer">
+                            <param id="0" name="Game">GAME_NAME</param>
+                            <param id="1" name="Instance">INSTANCE_NAME</param>
+                            <param id="2" name="Room">ROOM_NAME</param>
+                            <param id="3" name="Max peers">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3221037506697301">
+                    <conditions>
+                        <condition id="5" name="On joined room" sid="6189077440566507" type="Multiplayer" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="618972810003627">
+                            <conditions>
+                                <condition id="10" name="Is host" sid="354460995495485" type="Multiplayer" />
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="7203891019244407" type="System">
+                                    <param id="0" name="Group name">&quot;Host&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="5551055362261514" type="Peer">
+                                    <param id="0" name="Instance variable">peerid</param>
+                                    <param id="1" name="Value">Multiplayer.MyID</param>
+                                </action>
+                                <action id="13" name="Associate object with peer" sid="735561022872139" type="Multiplayer">
+                                    <param id="0" name="Object">Peer</param>
+                                    <param id="1" name="Peer ID">Multiplayer.MyID</param>
+                                </action>
+                                <action disabled="1" id="-16" name="Wait" sid="9883249576320982" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action behavior="ScrollTo" id="1" name="Set enabled" sid="7560120532398738" type="Peer">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="3370768626087573">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="7488670071169642" type="System">
+                                            <param id="0" name="Object">WALL</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="6094834970672251" type="WALL">
+                                            <param id="0" name="Instance variable">WidthVar</param>
+                                            <param id="1" name="Value">Self.Width</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="2404829073221152" type="WALL">
+                                            <param id="0" name="Instance variable">HeightVar</param>
+                                            <param id="1" name="Value">Self.Height</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="7859375577571663">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="2724999510478805" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="5542904191160275" type="System">
+                                    <param id="0" name="Group name">&quot;Peer&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="1544201384581665" type="Peer" />
+                                <action id="-9" name="Destroy" sid="5916547632178379" type="guard" />
+                                <action id="-9" name="Destroy" sid="5617079937932471" type="Sprite6" />
+                                <action id="-9" name="Destroy" sid="5221078805417785" type="WALL" />
+                                <action id="-9" name="Destroy" sid="2880357222447745" type="big_energy" />
+                                <action id="-9" name="Destroy" sid="4627677572257552" type="small_energy" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="5821456278431135" title="Game">
+            <sub-events>
+                <event-group description="" sid="9717612132509493" title="Common">
+                    <sub-events>
+                        <event-block sid="3027126845237183">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="7076574654427385" type="System">
+                                    <param id="0" name="Interval (seconds)">0.05</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="809516360304254" type="Bullet">
+                                    <param id="0" name="Object">trail</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Bullet" id="1" name="Set acceleration" sid="8240364073519915" type="trail">
+                                    <param id="0" name="Acceleration">clamp(Bullet.Power*25, 300,3000)</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="4525847400302212" type="trail">
+                                    <param id="0" name="Scale">Bullet.Scale</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3263167344680149">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="6012905225970511" type="Peer" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="4010131927020063" type="Peer">
+                                    <param id="0" name="Instance variable">deaths</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="9721771007759368" type="System">
+                                    <param id="0" name="Seconds">0.01</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="4387152646573539" type="Peer">
+                                    <param id="0" name="Frame number">Peer.color</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1628533919550396">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8558447403261417" type="Peer">
+                                    <param id="0" name="Instance variable">peerid</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Multiplayer.MyID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="9166484039636302" type="Peer">
+                                    <param id="0" name="Instance variable">lookatx</param>
+                                    <param id="1" name="Value">Mouse.X</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="7693008175826366" type="Peer">
+                                    <param id="0" name="Instance variable">lookaty</param>
+                                    <param id="1" name="Value">Mouse.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6706005696767986">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="476903175621593" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-20" name="Set layout scale" sid="4484730154794814" type="System">
+                                    <param id="0" name="Scale">lerp(LayoutScale ,clamp(1-(peer.health-100)/1000,0.5,2.5),dt)</param>
+                                </action>
+                                <action id="-22" name="Set angle toward position" sid="2951067363953177" type="Peer">
+                                    <param id="0" name="X">Self.lookatx</param>
+                                    <param id="1" name="Y">Self.lookaty</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="5723798972668355" type="Peer">
+                                    <param id="0" name="Scale">Self.health*0.01/8+0.3</param>
+                                </action>
+                                <action behavior="LineOfSight" id="0" name="Set range" sid="3830439920967697" type="Peer">
+                                    <param id="0" name="Range">round ((Self.health/4+30)+Self.health/10)</param>
+                                </action>
+                                <action behavior="8Direction" id="4" name="Set max speed" sid="6282981393008639" type="Peer">
+                                    <param id="0" name="Max Speed">90-Self.health/15</param>
+                                </action>
+                                <action disabled="1" id="-3" name="Set position" sid="615098713456863" type="Scores">
+                                    <param id="0" name="X">15</param>
+                                    <param id="1" name="Y">15</param>
+                                </action>
+                                <action id="0" name="Set text" sid="1569967858024823" type="Energy">
+                                    <param id="0" name="Text">&quot;[&quot; &amp; Peer.peerid &amp; &quot;] &quot; &amp; round(Peer.health)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="8168012486095263" type="Energy">
+                                    <param id="0" name="X">Peer.X</param>
+                                    <param id="1" name="Y">Peer.Y - 25</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="1914305874656943" type="Sprite">
+                                    <param id="0" name="Object">Peer</param>
+                                    <param id="1" name="Image point (optional)">2</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="3697989857182749" type="Sprite">
+                                    <param id="0" name="Width">self.ImageWidth*peer.current_reload*(Peer.health*0.01/8+0.3)</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="8726269014408668" type="Sprite">
+                                    <param id="0" name="Height">self.ImageHeight*(Peer.health*0.01/8+0.3)</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="9763048631906068" type="Sprite">
+                                    <param id="0" name="Angle">Peer.Angle</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="1034891139394455">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Set text" sid="2823785605619308" type="Scores">
+                                            <param id="0" name="Text">&quot;[&quot; &amp; Peer.Count &amp; &quot;] Scores:&quot; &amp; newline</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <variable constant="0" name="ind" sid="4355438426020076" static="0" type="number">1</variable>
+                                        <event-block sid="1474337274056433">
+                                            <conditions>
+                                                <condition id="-24" name="For Each (ordered)" sid="2539357956638472" type="System">
+                                                    <param id="0" name="Object">Peer</param>
+                                                    <param id="1" name="Expression">0</param>
+                                                    <param id="2" name="Order">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Append text" sid="4638891632120784" type="Scores">
+                                                    <param id="0" name="Text">ind &amp; &quot;. [&quot; &amp; Peer.peerid &amp; &quot;] &quot; &amp; round(Peer.health) &amp; &quot; / d: &quot; &amp; Peer.deaths &amp; newline</param>
+                                                </action>
+                                                <action id="-10" name="Add to" sid="6774435458198019" type="System">
+                                                    <param id="0" name="Variable">ind</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="6652029590458316">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="6437798125345156" type="Peer">
+                                                    <param id="0" name="Instance variable">current_reload</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-11" name="Add to" sid="2464662168409614" type="Peer">
+                                                    <param id="0" name="Instance variable">current_reload</param>
+                                                    <param id="1" name="Value">dt/Peer.reload_time</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="8593318158656651">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="3172270324237922" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="2759345271544506" type="guard" />
+                                <action id="-9" name="Destroy" sid="2745782382053015" type="Sprite6" />
+                                <action disabled="1" id="-8" name="Set angle" sid="1943607940075671" type="WALL">
+                                    <param id="0" name="Angle">random(360)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Теперь пули имеют мощность и ускорение полета в зависимости от потраченной на выстрел энергии. </comment>
+                        <event-block sid="1650771677577024">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="3158832410394809" type="Bullet" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="9854743111958364" type="System">
+                                    <param id="0" name="Seconds">0.01</param>
+                                </action>
+                                <action behavior="Bullet" disabled="1" id="1" name="Set acceleration" sid="4922086504803432" type="Bullet">
+                                    <param id="0" name="Acceleration">clamp(Self.Power*25, 300,3000)</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="94227752812623" type="Bullet">
+                                    <param id="0" name="Scale">Self.Scale</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="7602723805832462" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="5772208191883354" type="Bullet">
+                                    <param id="0" name="Instance variable">CanHitSelf</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="5038090498389967" type="System">
+                                    <param id="0" name="Seconds">1.2</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="2261505288758445" type="Bullet" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="3424724962569707">
+                            <conditions>
+                                <condition id="-9" name="Is visible" sid="4993488471962865" type="Bullet" />
+                                <condition id="-6" name="Every X seconds" sid="4876148893164205" type="System">
+                                    <param id="0" name="Interval (seconds)">0.05</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="9676605914243048" type="Bullet">
+                                    <param id="0" name="Object">trail</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Bullet" disabled="1" id="1" name="Set acceleration" sid="2012743455951798" type="trail">
+                                    <param id="0" name="Acceleration">clamp(Bullet.Power*25, 300,3000)</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="7651131281288066" type="trail">
+                                    <param id="0" name="Scale">Bullet.Scale</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Пули постепенно сгорают теряя мощность. </comment>
+                        <event-block sid="2921933273156988">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="6128441561075434" type="System">
+                                    <param id="0" name="Interval (seconds)">0.1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="5220165743346812" type="Bullet">
+                                    <param id="0" name="Instance variable">Power</param>
+                                    <param id="1" name="Value">self.Power*0.95</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="5704188999122302" type="Bullet">
+                                    <param id="0" name="Instance variable">Scale</param>
+                                    <param id="1" name="Value">self.Scale*0.92</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="8362652293196499" type="Bullet">
+                                    <param id="0" name="Scale">Self.Scale</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="2915783964329523">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="1732547302532473" type="Bullet">
+                                            <param id="0" name="Instance variable">Power</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="4209912424126208" type="Bullet" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="2927128890519627" title="Host">
+                    <sub-events>
+                        <event-block sid="4706621507513965">
+                            <conditions>
+                                <condition id="11" name="On peer connected" sid="89990684944181" type="Multiplayer" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="1075460109356152" type="System">
+                                    <param id="0" name="Object to create">Peer</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">random(50, LayoutWidth - 50)</param>
+                                    <param id="3" name="Y">random(50, LayoutHeight - 50)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="6743841249077396" type="Peer">
+                                    <param id="0" name="Instance variable">peerid</param>
+                                    <param id="1" name="Value">Multiplayer.PeerID</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="9298897644905874" type="Peer">
+                                    <param id="0" name="Instance variable">color</param>
+                                    <param id="1" name="Value">random(6)</param>
+                                </action>
+                                <action id="13" name="Associate object with peer" sid="3169689865763295" type="Multiplayer">
+                                    <param id="0" name="Object">Peer</param>
+                                    <param id="1" name="Peer ID">Multiplayer.PeerID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2604924695340333">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2809392446147974" type="Peer">
+                                    <param id="0" name="Instance variable">peerid</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Multiplayer.MyID</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="7221803288860892">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="8956426269131651" type="Keyboard">
+                                            <param id="0" name="Key">37 (Left arrow)</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="1047062414602663" type="Keyboard">
+                                            <param id="0" name="Key">65 (A)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="1134551310189391" type="Peer">
+                                            <param id="0" name="Control">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="8330279632143845">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="5745489363555659" type="Keyboard">
+                                            <param id="0" name="Key">38 (Up arrow)</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="5715694520026138" type="Keyboard">
+                                            <param id="0" name="Key">87 (W)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="612130242722257" type="Peer">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="1544810350241463">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="6313585625320462" type="Keyboard">
+                                            <param id="0" name="Key">39 (Right arrow)</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="1339492532921367" type="Keyboard">
+                                            <param id="0" name="Key">68 (D)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="9004189788776093" type="Peer">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="8557904092513899">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="5314214662713799" type="Keyboard">
+                                            <param id="0" name="Key">40 (Down arrow)</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="6731608311898766" type="Keyboard">
+                                            <param id="0" name="Key">83 (S)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="5498801904959502" type="Peer">
+                                            <param id="0" name="Control">3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6463229294374299">
+                                    <conditions>
+                                        <condition id="2" name="Mouse button is down" sid="5564266817034129" type="Mouse">
+                                            <param id="0" name="Mouse button">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="2005204468769666" type="Peer">
+                                            <param id="0" name="Instance variable">inputs</param>
+                                            <param id="1" name="Value">setbit(self.inputs, 4, 1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1626008252162803">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="3580674780016806" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="9496267274115759" type="Peer">
+                                            <param id="0" name="Instance variable">inputs</param>
+                                            <param id="1" name="Value">setbit(self.inputs, 4, 0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="1512622789758421">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="1011533419295631" type="System">
+                                    <param id="0" name="Object">Peer</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="2559184572830446" type="Peer">
+                                    <param id="0" name="Instance variable">peerid</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">Multiplayer.MyID</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7899790882709187">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="4850188210188186" type="Peer">
+                                            <param id="0" name="Instance variable">peerid</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">Multiplayer.MyID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="1202720653410462" type="Peer">
+                                            <param id="0" name="Instance variable">lookatx</param>
+                                            <param id="1" name="Value">Multiplayer.PeerState(Peer.peerid, &quot;lookx&quot;)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="7719338873543618" type="Peer">
+                                            <param id="0" name="Instance variable">lookaty</param>
+                                            <param id="1" name="Value">Multiplayer.PeerState(Peer.peerid, &quot;looky&quot;)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="4065482658713066" type="Peer">
+                                            <param id="0" name="Instance variable">inputs</param>
+                                            <param id="1" name="Value">Multiplayer.PeerState(Peer.peerid, &quot;inputs&quot;)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="4022140211833965">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="8764343943068035" type="System">
+                                                    <param id="0" name="First value">getbit(Peer.inputs, 0)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="3276281384988901" type="Peer">
+                                                    <param id="0" name="Control">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="9237365767460799">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="263098676947675" type="System">
+                                                    <param id="0" name="First value">getbit(Peer.inputs, 1)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="460597806185376" type="Peer">
+                                                    <param id="0" name="Control">2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="3287789306270451">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="1402209691805693" type="System">
+                                                    <param id="0" name="First value">getbit(Peer.inputs, 2)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="7397541709872396" type="Peer">
+                                                    <param id="0" name="Control">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="5083879557531126">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="5866507487202917" type="System">
+                                                    <param id="0" name="First value">getbit(Peer.inputs, 3)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="4852681502830672" type="Peer">
+                                                    <param id="0" name="Control">3</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="6994075815787759">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="4049425966346058" type="System">
+                                    <param id="0" name="Object">Peer</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>У формула которая отнимает энергию за стрельбу скоректирована дабы выстрелы стоили дороже с увеличением корабля </comment>
+                                <event-block sid="1822984212796537">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="2785448090497799" type="System">
+                                            <param id="0" name="First value">getbit(Peer.inputs, 4)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="4559563926159284">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="7968575737409668" type="Peer">
+                                                    <param id="0" name="Instance variable">FirstShot</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="4530869388798777" type="Peer">
+                                                    <param id="0" name="Instance variable">reload</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="7161640399718289" type="Peer">
+                                                    <param id="0" name="Instance variable">health</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">25</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="2163933985727064" type="Peer">
+                                                    <param id="0" name="Instance variable">FirstShot</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="588804820873037" type="Peer">
+                                                    <param id="0" name="Instance variable">inputs</param>
+                                                    <param id="1" name="Value">setbit(Self.inputs, 4, 0)</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="4063033256470465" type="Peer">
+                                                    <param id="0" name="Object">Bullet</param>
+                                                    <param id="1" name="Layer">1</param>
+                                                    <param id="2" name="Image point">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="2216541094731482" type="Bullet">
+                                                    <param id="0" name="Instance variable">Power</param>
+                                                    <param id="1" name="Value">Peer.health/10+2</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="7066301971128973" type="Bullet">
+                                                    <param id="0" name="Instance variable">Scale</param>
+                                                    <param id="1" name="Value">Peer.health*0.01/2.5+0.05</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="3776260897800173" type="Bullet">
+                                                    <param id="0" name="Instance variable">ShooterID</param>
+                                                    <param id="1" name="Value">Peer.peerid</param>
+                                                </action>
+                                                <action id="-12" name="Subtract from" sid="7587191607148479" type="Peer">
+                                                    <param id="0" name="Instance variable">health</param>
+                                                    <param id="1" name="Value">clamp(Self.health * 0.05, 1,3)</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="9013586379444586" type="Peer">
+                                                    <param id="0" name="Instance variable">reload</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="2182506930408782">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="1528260113861883" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="3295203650724494" type="Peer">
+                                            <param id="0" name="Instance variable">FirstShot</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="8429142066891721">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1023397967547331" type="Peer">
+                                    <param id="0" name="Instance variable">reload</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="8967499759317277" type="Peer">
+                                    <param id="0" name="Instance variable">reload</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="245752391571441" type="Peer">
+                                    <param id="0" name="Instance variable">reload_time</param>
+                                    <param id="1" name="Value">0.2+Peer.health*0.002</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="9086823994120563" type="Peer">
+                                    <param id="0" name="Instance variable">current_reload</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="8188215062005516" type="System">
+                                    <param id="0" name="Seconds">peer.reload_time</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="3256319254176539" type="Peer">
+                                    <param id="0" name="Instance variable">reload</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="927850005475253">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="854758844548472" type="Peer">
+                                    <param id="0" name="Instance variable">health</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="1463025461462393" type="Peer">
+                                    <param id="0" name="Instance variable">deaths</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="4896708113800731" type="Peer">
+                                    <param id="0" name="X">random(50, LayoutWidth - 50)</param>
+                                    <param id="1" name="Y">random(50, LayoutHeight - 50)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="357896668460102" type="Peer">
+                                    <param id="0" name="Instance variable">health</param>
+                                    <param id="1" name="Value">100</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="6499977667377412" type="Peer">
+                                    <param id="0" name="Instance variable">reload</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6492456662200636">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="10990647724032" type="Peer">
+                                    <param id="0" name="Object">small_energy</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="6822995048342104" type="small_energy" />
+                                <action disabled="1" id="-11" name="Add to" sid="8126321215087322" type="Peer">
+                                    <param id="0" name="Instance variable">health</param>
+                                    <param id="1" name="Value">Self.health * 0.02 + 3</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="8079473552768561" type="Peer">
+                                    <param id="0" name="Instance variable">health</param>
+                                    <param id="1" name="Value">5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8708491070287851">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="1934665353984793" type="Peer">
+                                    <param id="0" name="Object">big_energy</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="9250981825050551" type="big_energy">
+                                    <param id="0" name="Scale">0.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="5504739522651414" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="280768848490016" type="big_energy" />
+                                <action disabled="1" id="-11" name="Add to" sid="5528474424651816" type="Peer">
+                                    <param id="0" name="Instance variable">health</param>
+                                    <param id="1" name="Value">Self.health * 0.1 + 10</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="9179649862843783" type="Peer">
+                                    <param id="0" name="Instance variable">health</param>
+                                    <param id="1" name="Value">10</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="3202688828948857" type="System">
+                                    <param id="0" name="Seconds">random(3)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4448707863649927">
+                            <conditions>
+                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="5921813919111411" type="Peer">
+                                    <param id="0" name="Object">small_energy</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-22" name="Set angle toward position" sid="2434516432337375" type="small_energy">
+                                    <param id="0" name="X">Peer.x</param>
+                                    <param id="1" name="Y">Peer.y</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="3627506748545118" type="System">
+                                    <param id="0" name="Seconds">0.3</param>
+                                </action>
+                                <action behavior="Bullet" id="1" name="Set acceleration" sid="2231093162113081" type="small_energy">
+                                    <param id="0" name="Acceleration">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1238118437340204">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="5811987100525129" type="Peer">
+                                    <param id="0" name="Object">WALL</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="5975006800791666" type="Peer">
+                                    <param id="0" name="Instance variable">health</param>
+                                    <param id="1" name="Value">Self.health * 0.01</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="4238994737702282" type="Peer">
+                                    <param id="0" name="&apos;On&apos; time">0.05</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.05</param>
+                                    <param id="2" name="Duration">0.2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4127008486115989">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="5725607270607577" type="Peer">
+                                    <param id="0" name="Object">explosion</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="226427246793166" type="Peer">
+                                    <param id="0" name="Instance variable">health</param>
+                                    <param id="1" name="Value">explosion.blast </param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8713015490718483">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="5798116169192633" type="big_energy">
+                                    <param id="0" name="Object">WALL</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="5445379800013697" type="big_energy">
+                                    <param id="0" name="Object">explosion</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="595323899686466" type="explosion">
+                                    <param id="0" name="Angle">random(90)</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="8323065933579642" type="big_energy" />
+                                <action id="-16" name="Wait" sid="8942031611014427" type="System">
+                                    <param id="0" name="Seconds">random(3)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9363704467360853">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="8432872484677594" type="big_energy">
+                                    <param id="0" name="Object">Bullet</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="2252078359124508" type="Bullet" />
+                                <action id="9" name="Set scale" sid="308116530950528" type="big_energy">
+                                    <param id="0" name="Scale">0.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="6067374176479325" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="4362611049329446" type="big_energy" />
+                                <action id="-3" name="Create object" sid="7172001750431475" type="System">
+                                    <param id="0" name="Object to create">small_energy</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">big_energy.X +random(-50,50) </param>
+                                    <param id="3" name="Y">big_energy.y+random(-50,50)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="7114682514603187" type="System">
+                                    <param id="0" name="Object to create">small_energy</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">big_energy.X +random(-50,50) </param>
+                                    <param id="3" name="Y">big_energy.y+random(-50,50)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="6917605781448287" type="System">
+                                    <param id="0" name="Object to create">small_energy</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">big_energy.X +random(-50,50) </param>
+                                    <param id="3" name="Y">big_energy.y+random(-50,50)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="5655872402290149" type="System">
+                                    <param id="0" name="Object to create">small_energy</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">big_energy.X +random(-50,50) </param>
+                                    <param id="3" name="Y">big_energy.y+random(-50,50)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="4072269107415281" type="System">
+                                    <param id="0" name="Object to create">small_energy</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">big_energy.X +random(-50,50) </param>
+                                    <param id="3" name="Y">big_energy.y+random(-50,50)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="3471567286372394" type="System">
+                                    <param id="0" name="Seconds">random(3)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3948916218640038">
+                            <conditions>
+                                <condition id="-19" name="On destroyed" sid="1932527410080464" type="big_energy" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="6180858987686387" type="System">
+                                    <param id="0" name="Object to create">big_energy</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">random(1500)+50</param>
+                                    <param id="3" name="Y">random(1100)+50</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9595869843228784">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="7452271484141706" type="small_energy">
+                                    <param id="0" name="Object">WALL</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="3136884571442452" type="small_energy">
+                                    <param id="0" name="Object">explosion</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="8633053004234347" type="explosion">
+                                    <param id="0" name="Angle">random(90)</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="6072057213719415" type="small_energy" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="6413179093669644">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="8429925341009241" type="small_energy" />
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="6406683304093138" type="small_energy">
+                                    <param id="0" name="Angle">random (360)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6996756519128476">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="1627011699005178" type="Bullet">
+                                    <param id="0" name="Object">small_energy</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="1099212307618256" type="small_energy">
+                                    <param id="0" name="Object">explosion</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="3953023015184021" type="explosion">
+                                    <param id="0" name="Angle">random(90)</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="5641442806404665" type="small_energy" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="7414903027444062">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="1157111883451256" type="Bullet">
+                                    <param id="0" name="Object">Peer</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="2971403184860056">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="6082677135172436" type="System">
+                                            <param id="0" name="First value">Bullet.ShooterID</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">Peer.peerid</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="8597491031587821" type="Bullet">
+                                            <param id="0" name="Instance variable">CanHitSelf</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="9158329172241653" type="Bullet" />
+                                        <action id="-12" name="Subtract from" sid="9099395748640401" type="Peer">
+                                            <param id="0" name="Instance variable">health</param>
+                                            <param id="1" name="Value">Bullet.Power</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="7167558456073695" type="Function">
+                                            <param id="0" name="Name">&quot;Vampire&quot;</param>
+                                            <param id="1" name="Parameter {n}">Bullet.ShooterID{###}Bullet.Power</param>
+                                        </action>
+                                        <action behavior="Flash" id="0" name="Flash" sid="7844213248945547" type="Peer">
+                                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                            <param id="2" name="Duration">0.3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="8701096668971585">
+                            <conditions>
+                                <condition id="0" name="On function" sid="8409667704994994" type="Function">
+                                    <param id="0" name="Name">&quot;Vampire&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="479783644148899" type="Peer">
+                                    <param id="0" name="Instance variable">peerid</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="7194481224795259" type="Peer">
+                                    <param id="0" name="Instance variable">health</param>
+                                    <param id="1" name="Value">Function.Param(1) *0.8</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1139641478309419">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="8748115560767386" type="Bullet">
+                                    <param id="0" name="Object">Sprite3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="502986791752021" type="Bullet" />
+                                <action id="-7" name="Set size" sid="2279217809342482" type="Sprite3">
+                                    <param id="0" name="Width">2</param>
+                                    <param id="1" name="Height">70</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="3992498370586797" type="System">
+                                    <param id="0" name="Seconds">0.05</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="5899692181979567" type="Sprite3" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="2491316503976932">
+                            <conditions>
+                                <condition id="-19" name="On destroyed" sid="7228441015876459" type="Bullet" />
+                                <condition id="-7" name="Compare instance variable" sid="1737340301972792" type="Bullet">
+                                    <param id="0" name="Instance variable">Power</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="3339451217275615" type="Bullet">
+                                    <param id="0" name="Object">explosion</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="7379190425533976" type="explosion">
+                                    <param id="0" name="Scale">bullet.power *0.1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="1986460695846327" type="explosion">
+                                    <param id="0" name="Instance variable">blast</param>
+                                    <param id="1" name="Value">Bullet.Power*0.1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="4366940310469643">
+                            <conditions>
+                                <condition disabled="1" id="0" name="On collision with another object" sid="4236546936474103" type="Bullet">
+                                    <param id="0" name="Object">WALL</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="650247522442645" type="Bullet" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="9973374972914893">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="7233942579344064" type="explosion">
+                                    <param id="0" name="Object">Bullet</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="1518732768938553" type="Bullet" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="322276201675808">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="4447818579265291" type="explosion">
+                                    <param id="0" name="Object">small_energy</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="9831256013303264" type="small_energy">
+                                    <param id="0" name="Object">explosion</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="2743126304600609" type="explosion">
+                                    <param id="0" name="Angle">random(90)</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="8882827514176863" type="small_energy" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="3178103490369045">
+                            <conditions>
+                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="4678775734156781" type="Bullet">
+                                    <param id="0" name="Object">Peer</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-22" name="Set angle toward position" sid="4341849017978461" type="Bullet">
+                                    <param id="0" name="X">Peer.x</param>
+                                    <param id="1" name="Y">Peer.y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="4326460463322626" title="Peer">
+                    <sub-events>
+                        <event-block sid="8072145129133208">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="4985848431332553" type="Peer" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="4254485500870815" type="Peer">
+                                    <param id="0" name="Instance variable">peerid</param>
+                                    <param id="1" name="Value">Multiplayer.PeerID</param>
+                                </action>
+                                <action id="13" name="Associate object with peer" sid="5195602532586437" type="Multiplayer">
+                                    <param id="0" name="Object">Peer</param>
+                                    <param id="1" name="Peer ID">Multiplayer.PeerID</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="3182019444019046">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="2531998868892979" type="Peer">
+                                            <param id="0" name="Instance variable">peerid</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">Multiplayer.MyID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="16" name="Enable local input prediction" sid="9618881614179259" type="Multiplayer">
+                                            <param id="0" name="Object">Peer</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="4090468317888971" type="System">
+                                            <param id="0" name="Seconds">0.01</param>
+                                        </action>
+                                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="5446962494709765" type="Peer">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>&apos;On client update&apos; triggers when the Multiplayer object is about to send our inputs to the host, so we need to update them. To save bandwidth, we use an 8-bit value in the &apos;inputs&apos; instance variable. We store use five controls - arrow keys and shooting - represented as five bits in the 8-bit input number. 0 means not pressed and 1 means pressed. The five bits we use are:&#x0D;&#x0A;0 = left&#x0D;&#x0A;1 = up&#x0D;&#x0A;2 = right&#x0D;&#x0A;3 = down&#x0D;&#x0A;4 = shooting&#x0D;&#x0A;We also need to send to the host the position where we&apos;re looking/aiming, and these are sent with the &quot;lookx&quot; and &quot;looky&quot; input values. Note all three values (&quot;input&quot;, &quot;lookx&quot; and &quot;looky&quot;) were added in &apos;Start of Layout&apos;.</comment>
+                        <event-block sid="4385576280002124">
+                            <conditions>
+                                <condition id="17" name="On client update" sid="5280653633341052" type="Multiplayer" />
+                                <condition id="-7" name="Compare instance variable" sid="905254534328703" type="Peer">
+                                    <param id="0" name="Instance variable">peerid</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Multiplayer.MyID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Set client state" sid="6151337959383352" type="Multiplayer">
+                                    <param id="0" name="Tag">&quot;lookx&quot;</param>
+                                    <param id="1" name="Value">Mouse.X</param>
+                                </action>
+                                <action id="14" name="Set client state" sid="8679962649159333" type="Multiplayer">
+                                    <param id="0" name="Tag">&quot;looky&quot;</param>
+                                    <param id="1" name="Value">Mouse.Y</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block any="1" sid="2670099521058057">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="152156348797777" type="Keyboard">
+                                            <param id="0" name="Key">37 (Left arrow)</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="7446892691329694" type="Keyboard">
+                                            <param id="0" name="Key">65 (A)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="5268307478146409" type="Peer">
+                                            <param id="0" name="Instance variable">inputs</param>
+                                            <param id="1" name="Value">setbit(Self.inputs, 0, 1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="286493509089599">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="9672292072714782" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="6674218233060241" type="Peer">
+                                            <param id="0" name="Instance variable">inputs</param>
+                                            <param id="1" name="Value">setbit(Self.inputs, 0, 0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="9891667905662005">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="8229204642884096" type="Keyboard">
+                                            <param id="0" name="Key">38 (Up arrow)</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="7589392802191442" type="Keyboard">
+                                            <param id="0" name="Key">87 (W)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="7954469544408563" type="Peer">
+                                            <param id="0" name="Instance variable">inputs</param>
+                                            <param id="1" name="Value">setbit(Self.inputs, 1, 1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4537498366838331">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="2938614616540758" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="8823153640303909" type="Peer">
+                                            <param id="0" name="Instance variable">inputs</param>
+                                            <param id="1" name="Value">setbit(Self.inputs, 1, 0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="7418359373040038">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="4867874030214865" type="Keyboard">
+                                            <param id="0" name="Key">39 (Right arrow)</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="2891829384180082" type="Keyboard">
+                                            <param id="0" name="Key">68 (D)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="5537632097376377" type="Peer">
+                                            <param id="0" name="Instance variable">inputs</param>
+                                            <param id="1" name="Value">setbit(Self.inputs, 2, 1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="446128009241072">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="2010488171132048" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="253834575866895" type="Peer">
+                                            <param id="0" name="Instance variable">inputs</param>
+                                            <param id="1" name="Value">setbit(Self.inputs, 2, 0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="8684928378898382">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="8912834478927302" type="Keyboard">
+                                            <param id="0" name="Key">40 (Down arrow)</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="7328812537409814" type="Keyboard">
+                                            <param id="0" name="Key">83 (S)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="4345932644195571" type="Peer">
+                                            <param id="0" name="Instance variable">inputs</param>
+                                            <param id="1" name="Value">setbit(Self.inputs, 3, 1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1742939094976363">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="3595406828457953" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="4911692361140862" type="Peer">
+                                            <param id="0" name="Instance variable">inputs</param>
+                                            <param id="1" name="Value">setbit(Self.inputs, 3, 0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6833651368671995">
+                                    <conditions>
+                                        <condition id="2" name="Mouse button is down" sid="573803945194291" type="Mouse">
+                                            <param id="0" name="Mouse button">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="6465338380760845" type="Peer">
+                                            <param id="0" name="Instance variable">inputs</param>
+                                            <param id="1" name="Value">setbit(Self.inputs, 4, 1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1253596103917935">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="4213608825361142" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="7146716668335187" type="Peer">
+                                            <param id="0" name="Instance variable">inputs</param>
+                                            <param id="1" name="Value">setbit(Self.inputs, 4, 0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7029550341994181">
+                                    <conditions />
+                                    <actions>
+                                        <action id="14" name="Set client state" sid="4341228086747555" type="Multiplayer">
+                                            <param id="0" name="Tag">&quot;inputs&quot;</param>
+                                            <param id="1" name="Value">Peer.inputs</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="311298924386248" type="Peer">
+                                            <param id="0" name="Instance variable">inputs</param>
+                                            <param id="1" name="Value">setbit(Self.inputs, 4, 0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="6851002042189209">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="587100596152668" type="Peer">
+                                    <param id="0" name="Instance variable">peerid</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Multiplayer.MyID</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7714475367135926">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="7368416345280936" type="System">
+                                            <param id="0" name="First value">getbit(Peer.inputs, 0)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="739761835636617" type="Peer">
+                                            <param id="0" name="Control">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2700903167413457">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="6083998441798839" type="System">
+                                            <param id="0" name="First value">getbit(Peer.inputs, 1)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="2651377838636674" type="Peer">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3369364844434496">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="9630119370806458" type="System">
+                                            <param id="0" name="First value">getbit(Peer.inputs, 2)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="5158197936778984" type="Peer">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7789774310376901">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="9805667067605574" type="System">
+                                            <param id="0" name="First value">getbit(Peer.inputs, 3)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="5144677598609446" type="Peer">
+                                            <param id="0" name="Control">3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="5156023088035089">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="4640868458033943" type="WALL" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="4732438009169182" type="System">
+                                    <param id="0" name="Seconds">0.01</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="9445052666583674" type="WALL">
+                                    <param id="0" name="Width">Self.WidthVar</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="6094060463805227" type="WALL">
+                                    <param id="0" name="Height">Self.HeightVar</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
